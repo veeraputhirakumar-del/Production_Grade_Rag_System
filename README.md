@@ -48,20 +48,57 @@ The system combines FastAPI, Streamlit, ChromaDB, BM25, Sentence Transformers, a
 # Project Structure
 
 ```
-Production-Grade-RAG-System
+## Project Structure
+
+```text
+Production_Grade_RAG_System/
 │
-├── backend
+├── backend/
 │   ├── main.py
+│   ├── database.py
+│   ├── config.py
+│   ├── schemas.py
+│   ├── chunker.py
+│   ├── document_parser.py
+│   ├── embedding_model.py
+│   ├── chroma_store.py
+│   ├── bm25_store.py
+│   ├── retriever.py
+│   ├── rag_pipeline.py
+│   ├── llm.py
+│   ├── bulk_ingestion.py
+│   ├── clear_documents.py
+│   ├── rag_app.db
+│   ├── data/
+│   │   ├── uploads/
+│   │   ├── chroma_db/
+│   │   └── bm25/
+│   ├── .env
+│   ├── .env.example
 │   ├── requirements.txt
-│   └── ...
-│
-├── frontend
+│   └── ANSWER_FIX.md
+
+├── streamlit_frontend/
 │   ├── app.py
-│   ├── pages
+│   ├── api_client.py
 │   ├── styles.py
-│   └── ...
-│
-└── README.md
+│   ├── analytics.py
+│   ├── Documents.py
+│   ├── requirements.txt
+│   ├── .env
+│   ├── .streamlit/
+│   │   └── config.toml
+│   ├── pages/
+│      ├── 1_Chat.py
+│      ├── 2_Upload.py
+│      ├── 3_Documents.py
+│      ├── 4_History.py
+│      ├── 5_Analytics.py
+│      └── 6_Settings.py
+├── README.md
+├── LICENSE
+└── .gitignore
+```
 ```
 
 ---
